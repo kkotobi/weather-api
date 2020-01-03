@@ -16,6 +16,8 @@ If the server stops or restarts all the data is lost (by design).
 *Please note:* That when you start the app you will see a directory of current endpoints on the console.
 
 ## Routes 
+- As an added convenience there's a postman collection on the root folder of this repo
+under /postman-collection, it contains inputs and query strings so you can play around with this app.
 
 #### POST 
     /measurements

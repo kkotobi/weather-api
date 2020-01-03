@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "7d19115d-8adc-4fbf-8906-bff0d8540a4e",
+		"name": "Weather-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST => /measurements",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"timestamp\": \"2015-09-01T16:00:00.000Z\",\n    \"temperature\": 27.1,\n    \"dewPoint\": 16.7,\n    \"precipitation\": 0,\n    \"a\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/measurements",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"measurements"
+					]
+				},
+				"description": "Sends one or many measurements which may or maynot have valid data in the request body. "
+			},
+			"response": []
+		},
+		{
+			"name": "GET => /measurements/:timestamp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/measurements/2015-09-01T16:00:00.000Z",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"measurements",
+						"2015-09-01T16:00:00.000Z"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET => /stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/stats?stat=min&stat=max&stat=average&metric=temperature&metric=dewPoint&metric=precipitation&fromDateTime=2015-09-01T16:00:00.000Z&toDateTime=2015-11-01T16:00:00.000Z",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stats"
+					],
+					"query": [
+						{
+							"key": "stat",
+							"value": "min"
+						},
+						{
+							"key": "stat",
+							"value": "max"
+						},
+						{
+							"key": "stat",
+							"value": "average"
+						},
+						{
+							"key": "metric",
+							"value": "temperature"
+						},
+						{
+							"key": "metric",
+							"value": "dewPoint"
+						},
+						{
+							"key": "metric",
+							"value": "precipitation"
+						},
+						{
+							"key": "fromDateTime",
+							"value": "2015-09-01T16:00:00.000Z"
+						},
+						{
+							"key": "toDateTime",
+							"value": "2015-11-01T16:00:00.000Z"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
