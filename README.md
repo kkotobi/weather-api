@@ -83,8 +83,7 @@ Returns (if query string matches data in store, otherwise you get back 404):
     "timestamp": "2015-09-01T16:00:00.000Z",
     "temperature": 27.1,
     "dewPoint": 16.7,
-    "precipitation": 0,
-    "a": 0
+    "precipitation": 0
 }
 ```
     
