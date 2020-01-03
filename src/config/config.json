@@ -1,0 +1,14 @@
+{
+  "DEFAULT_PORT": 8000,
+  "LIVE_URL": "http://www.yourdomain.com/",
+  "LOCAL_URL": "http://localhost",
+  "SERVER_UP_MSG": "Weather server is up and running",
+  "MEASUREMENTS_POST": "/measurements",
+  "STATS_GET": "/stats",
+  "STATS_GET_REQUIRED_KEYS": [
+    "stat",
+    "metric",
+    "fromDateTime",
+    "toDateTime"
+  ]
+}
